@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>My Portfolio Website</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="bg-slate-950 text-white scroll-smooth">
+    <!-- Floating Background -->
+
+    <div class="circle c1"></div>
+    <div class="circle c2"></div>
+    <div class="circle c3"></div>
+
+    <!-- Navbar -->
+
+    <nav
+      class="fixed w-full z-50 bg-black/40 backdrop-blur-xl border-b border-gray-700"
+    >
+      <div class="max-w-7xl mx-auto px-8">
+        <div class="flex justify-between items-center h-20">
+          <h1 class="text-3xl font-bold text-cyan-400">Hello I'm</h1>
+
+          <ul class="hidden md:flex space-x-8 text-lg">
+            <li>
+              <a href="#home" class="hover:text-cyan-400 duration-300">Home</a>
+            </li>
+            <li>
+              <a href="#about" class="hover:text-cyan-400 duration-300"
+                >About</a
+              >
+            </li>
+            <li>
+              <a href="#skills" class="hover:text-cyan-400 duration-300"
+                >Skills</a
+              >
+            </li>
+            <li>
+              <a href="#projects" class="hover:text-cyan-400 duration-300"
+                >Projects</a
+              >
+            </li>
+            <li>
+              <a href="#education" class="hover:text-cyan-400 duration-300"
+                >Education</a
+              >
+            </li>
+            <li>
+              <a href="#contact" class="hover:text-cyan-400 duration-300"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+
+    <section id="home" class="min-h-screen flex items-center pt-20">
+      <div class="max-w-7xl mx-auto px-8 grid md:grid-cols-2 gap-20">
+        <div>
+          <h1 class="text-6xl font-semibold mt-5">
+            SOUMAJIT
+            <span class="text-cyan-400"> CHAKRABORTY </span>
+          </h1>
+
+          <p class="mt-8 text-gray-300 text-lg leading-8">
+            Passionate Computer Science student with strong knowledge of HTML,
+            CSS, JavaScript, React, Node.js, Express.js, MongoDB, SQL and
+            Tailwind CSS. Interested in Full Stack Web Development, Problem
+            Solving and Modern UI Design.
+          </p>
+
+          <div class="mt-10 flex gap-6">
+            <a href="#" class="button"> Download Resume </a>
+
+            <a href="#contact" class="button2"> Hire Me </a>
+          </div>
+
+          <div class="mt-10 flex gap-6 text-3xl">
+            <i class="fab fa-github social"></i>
+            <i class="fab fa-linkedin social"></i>
+            <i class="fab fa-instagram social"></i>
+            <i class="fas fa-envelope social"></i>
+          </div>
+        </div>
+
+        <div class="flex justify-center">
+          <img src="dp.jpg" class="profile" />
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+
+    <section id="about" class="py-24">
+      <div class="max-w-7xl mx-auto px-8">
+        <h2 class="heading">About Me</h2>
+
+        <div class="glass p-10 mt-12">
+          <p class="text-lg leading-9 text-gray-300">
+            I am a Computer Science graduate passionate about creating
+            beautiful, responsive and user-friendly websites. I enjoy learning
+            new technologies and solving real-world problems through coding. I
+            continuously improve my skills in frontend and backend development,
+            working on projects using React, Express.js, MongoDB and Tailwind
+            CSS.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+
+    <section id="skills" class="py-24">
+      <div class="max-w-7xl mx-auto px-8">
+        <h2 class="heading">Technical Skills</h2>
+
+        <div class="grid md:grid-cols-4 gap-8 mt-16">
+          <div class="card">HTML</div>
+          <div class="card">CSS</div>
+          <div class="card">JavaScript</div>
+          <div class="card">Tailwind CSS</div>
+          <div class="card">React</div>
+          <div class="card">Node.js</div>
+          <div class="card">Express.js</div>
+          <div class="card">MongoDB</div>
+          <div class="card">SQL</div>
+          <div class="card">IoT</div>
+          <div class="card">GitHub</div>
+          <div class="card">C Programming</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+
+    <section id="projects" class="py-24">
+      <div class="max-w-7xl mx-auto px-8">
+        <h2 class="heading">Projects</h2>
+
+        <div class="grid md:grid-cols-3 gap-10 mt-16">
+          <div class="project cursor-pointer">
+            <img src="ecom.png" />
+
+            <h3 class="font-semibold text-slate-100 text-xl text-center">E-Commerce Website</h3>
+
+            <p class="text-center tracking-wide">HTML, CSS, Bootstrap, Django, MySQL</p>
+          </div>
+
+          <div class="project">
+            <img src="mytech.png" />
+
+            <h3 class="font-semibold text-slate-100 text-xl text-center">My Tech Academy</h3>
+
+            <p class="text-center tracking-wide">JavaScript, React, Tailwind CSS</p>
+          </div>
+
+          <div class="project">
+            <img src="myfood.png" />
+
+            <h3 class="font-semibold text-slate-100 text-xl text-center">Online Food Website</h3>
+
+            <p class="text-center tracking-wide">HTML, CSS, Javascript, React</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+
+    <section id="education" class="py-24">
+      <div class="max-w-7xl mx-auto px-8">
+        <h2 class="heading">Education</h2>
+
+                    <div class="glass p-8 mt-12">
+                    <h3 class="text-2xl font-bold text-cyan-400">
+                    Bachelor of Technology in Computer Science & Engineering
+                    </h3>
+                    <p class="mt-3 text-gray-300 text-xl">Bengal Institute Of Technology & Management</p>
+                    <p class="mt-2 text-gray-400 font-bold font-sans">2022 - 2025</p>
+                    </div>
+
+
+                    <div class="glass p-8 mt-12">
+                    <h3 class="text-2xl font-bold text-cyan-400">
+                    Diploma In Mechanical Engineering
+                    </h3>
+                    <p class="mt-3 text-gray-300 text-xl">Nalhati Government Polytechnic</p>
+                    <p class="mt-2 text-gray-400 font-bold font-sans">2018 - 2021</p>
+                    </div>
+
+
+                    <div class="glass p-8 mt-12">
+                    <h3 class="text-2xl font-bold text-cyan-400">
+                    Secondary & Higher Secondary ( Science )
+                    </h3>
+                    <p class="mt-3 text-gray-300 text-xl">Sainthia High School</p>
+                    <p class="mt-2 text-gray-400 font-bold font-calibri">2016 & 2018</p>
+                    </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+
+    <section id="contact" class="py-24">
+      <div class="max-w-4xl mx-auto px-8">
+        <h2 class="heading">Contact Me</h2>
+
+        <form class="glass mt-12 p-10">
+          <input type="text" placeholder="Your Name" class="input" />
+
+          <input type="email" placeholder="Your Email" class="input mt-6" />
+
+          <textarea
+            rows="6"
+            placeholder="Message"
+            class="input mt-6"
+          ></textarea>
+
+          <button class="button mt-8">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <footer class="py-8 text-center text-gray-400">
+      © 2026 Computer Science Portfolio
+    </footer>
+  </body>
+</html>
