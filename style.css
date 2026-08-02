@@ -247,3 +247,67 @@ body {
     }
 
 }
+
+@media (max-width:1024px){
+
+    .heading{
+        font-size:34px;
+    }
+
+    .profile{
+        max-width:340px;
+    }
+
+}
+
+@media (max-width:768px){
+
+    .heading{
+        font-size:30px;
+    }
+
+    .card{
+        padding:25px;
+        font-size:18px;
+    }
+
+    .project{
+        padding:18px;
+    }
+
+    .button,
+    .button2{
+        width:100%;
+        text-align:center;
+    }
+
+    .circle{
+        display:none;
+    }
+
+}
+
+@media (max-width:480px){
+
+    .heading{
+        font-size:26px;
+    }
+
+    .card{
+        padding:20px;
+        font-size:16px;
+    }
+
+    .profile{
+        max-width:280px;
+    }
+
+    .button{
+        padding:15px;
+    }
+
+    .button2{
+        padding:15px;
+    }
+
+}
