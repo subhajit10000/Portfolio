@@ -1,1 +1,451 @@
 
+:root {
+    --accent: #60a5fa;
+    --accent-2: #2563eb;
+}
+
+html {
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+    background: #020617;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ---------- Headings ---------- */
+
+.heading {
+    font-size: clamp(26px, 5vw, 40px);
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+    padding-bottom: 16px;
+}
+
+.heading::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 4px;
+    border-radius: 4px;
+    background: linear-gradient(90deg, var(--accent), var(--accent-2));
+}
+
+/* ---------- Nav ---------- */
+
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 2px;
+    background: var(--accent);
+    transition: width .3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active-link::after {
+    width: 100%;
+}
+
+.nav-link.active-link {
+    color: var(--accent);
+}
+
+.mobile-link {
+    display: block;
+    padding: 12px 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, .08);
+    transition: .3s;
+}
+
+.mobile-link:hover,
+.mobile-link:active {
+    color: var(--accent);
+    padding-left: 16px;
+}
+
+/* ---------- Glass ---------- */
+
+.glass {
+    background: rgba(255, 255, 255, .08);
+    backdrop-filter: blur(18px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, .15);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
+}
+
+/* ---------- Buttons ---------- */
+
+.button {
+    display: inline-block;
+    padding: 16px 30px;
+    background: linear-gradient(135deg, #475772, #183574);
+    border-radius: 40px;
+    font-weight: bold;
+    transition: .35s;
+    box-shadow: 0 8px 20px rgba(24, 53, 116, .4);
+}
+
+.button:hover {
+    background: linear-gradient(135deg, #0c1f47, #051c5a);
+    color: white;
+    transform: translateY(-4px);
+    box-shadow: 0 14px 28px rgba(24, 53, 116, .55);
+}
+
+.button2 {
+    display: inline-block;
+    padding: 14px 30px;
+    border: 2px solid var(--accent);
+    border-radius: 40px;
+    font-weight: 600;
+    transition: .35s;
+}
+
+.button2:hover {
+    background: var(--accent-2);
+    color: white;
+    transform: translateY(-4px);
+    box-shadow: 0 14px 28px rgba(37, 99, 235, .4);
+}
+
+@media (min-width: 400px) {
+    .xs\:w-auto {
+        width: auto;
+    }
+}
+
+/* ---------- Profile image ---------- */
+
+.profile {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 15%;
+    box-shadow: 0 0 60px rgba(59, 130, 246, .8);
+    border: 3px solid var(--accent);
+    animation: float 6s ease-in-out infinite;
+}
+
+/* ---------- Skill cards ---------- */
+
+.card {
+    padding: 30px 16px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #1d4ed8, #2563eb);
+    text-align: center;
+    font-size: 17px;
+    font-weight: 600;
+    transition: .35s;
+    border: 2px solid var(--accent);
+    box-shadow: 0 0 25px rgba(37, 99, 235, .35);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.card i {
+    font-size: 28px;
+    color: #bfdbfe;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    background: linear-gradient(135deg, #133170, #1f4d97);
+    border-color: #93c5fd;
+}
+
+@media (min-width: 640px) {
+    .card {
+        font-size: 20px;
+        padding: 36px 20px;
+    }
+    .card i {
+        font-size: 32px;
+    }
+}
+
+/* ---------- Projects / certificates ---------- */
+
+.project {
+    background: linear-gradient(135deg, #495985, #122b61);
+    padding: 20px;
+    border-radius: 14px;
+    transition: .35s;
+    border: 1px solid rgba(96, 165, 250, .3);
+}
+
+.project:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 12px 35px rgba(59, 130, 246, .4);
+    border-color: rgba(96, 165, 250, .7);
+}
+
+.project-img-wrap {
+    border-radius: 10px;
+    overflow: hidden;
+    aspect-ratio: 16 / 10;
+    background: rgba(255, 255, 255, .05);
+}
+
+.project-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .5s ease;
+}
+
+.project:hover .project-img-wrap img {
+    transform: scale(1.08);
+}
+
+/* ---------- Timeline (Education) ---------- */
+
+.timeline-item {
+    border-left: 3px solid var(--accent);
+    position: relative;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -9px;
+    top: 34px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 12px rgba(96, 165, 250, .8);
+}
+
+/* ---------- Contact form ---------- */
+
+.input {
+    width: 100%;
+    padding: 16px 18px;
+    background: #0f172a;
+    color: white;
+    border: 1px solid #3b82f6;
+    border-radius: 12px;
+    outline: none;
+    margin-top: 15px;
+    transition: .3s;
+}
+
+.input::placeholder {
+    color: rgba(255, 255, 255, .5);
+}
+
+.input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 15px rgba(96, 165, 250, .5);
+}
+
+/* ---------- Social icons ---------- */
+
+.social {
+    cursor: pointer;
+    transition: .35s;
+}
+
+.social:hover {
+    color: #38bdf8;
+    transform: scale(1.25) translateY(-3px);
+}
+
+/* ---------- Back to top ---------- */
+
+.to-top {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .4);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(10px);
+    transition: .3s;
+    z-index: 60;
+}
+
+.to-top.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.to-top:hover {
+    transform: translateY(-4px);
+}
+
+/* ---------- Scroll reveal ---------- */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity .7s ease, transform .7s ease;
+}
+
+.reveal.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+    .profile {
+        animation: none;
+    }
+}
+
+/* ---------- Background circles ---------- */
+
+.circle {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(120px);
+    z-index: -1;
+}
+
+.c1 {
+    width: 350px;
+    height: 350px;
+    background: rgb(22, 39, 141);
+    top: -100px;
+    left: -100px;
+}
+
+.c2 {
+    width: 300px;
+    height: 300px;
+    background: rgb(17, 3, 95);
+    right: -100px;
+    top: 250px;
+}
+
+.c3 {
+    width: 300px;
+    height: 300px;
+    background: rgb(11, 47, 82);
+    bottom: -100px;
+    left: 40%;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-16px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* ============ Responsive breakpoints ============ */
+
+@media (max-width: 1024px) {
+    .heading {
+        font-size: 34px;
+    }
+    .profile {
+        max-width: 340px;
+    }
+    .c1, .c2, .c3 {
+        filter: blur(90px);
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        padding: 25px 14px;
+        font-size: 17px;
+    }
+    .project {
+        padding: 16px;
+    }
+    .button,
+    .button2 {
+        text-align: center;
+    }
+    .circle {
+        opacity: .6;
+    }
+    .to-top {
+        right: 14px;
+        bottom: 14px;
+        width: 42px;
+        height: 42px;
+    }
+}
+
+@media (max-width: 480px) {
+    .heading {
+        font-size: 24px;
+    }
+    .heading::after {
+        width: 50px;
+        height: 3px;
+    }
+    .card {
+        padding: 20px 10px;
+        font-size: 15px;
+    }
+    .card i {
+        font-size: 22px;
+    }
+    .profile {
+        max-width: 240px;
+    }
+    .button {
+        padding: 14px 20px;
+    }
+    .button2 {
+        padding: 12px 20px;
+    }
+    .glass {
+        border-radius: 14px;
+    }
+    .circle {
+        display: none;
+    }
+}
+
+@media (max-width: 360px) {
+    .heading {
+        font-size: 21px;
+    }
+    .profile {
+        max-width: 200px;
+    }
+}
