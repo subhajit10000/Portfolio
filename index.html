@@ -3,10 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Subhajit Chakraborty — Computer Science graduate & full stack web developer. React, Node.js, Express.js, MongoDB, SQL, Tailwind CSS." />
 
-    <title>Subhajit Chakraborty | Portfolio</title>
+    <title>Subhajit Chakraborty | Full Stack Developer</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="style.css" />
 
@@ -16,7 +24,7 @@
     />
   </head>
 
-  <body class="bg-blue-600 text-white scroll-smooth">
+  <body class="text-white scroll-smooth">
     <!-- Floating Background -->
 
     <div class="circle c1"></div>
@@ -26,115 +34,102 @@
     <!-- Navbar -->
 
     <nav
-      class="fixed w-full z-50 bg-black/40 backdrop-blur-xl border-b border-gray-700"
+      id="navbar"
+      class="navbar fixed w-full z-50 bg-black/40 backdrop-blur-xl border-b border-gray-700"
     >
-      <div class="max-w-7xl mx-auto px-5 sm:px-8">
-        <div class="flex justify-between items-center h-16 sm:h-20">
-          <h1 class="text-xl sm:text-2xl md:text-3xl font-bold text-white">
-            My Portfolio
-          </h1>
+      <div class="max-w-7xl mx-auto px-6 md:px-8">
+        <div class="flex justify-between items-center h-20">
+          <a href="#home" class="logo-mark">My<span class="dot">Portfolio</span></a>
 
-          <!-- Desktop menu -->
-          <ul class="hidden md:flex space-x-8 text-lg">
-            <li>
-              <a href="#home" class="nav-link hover:text-cyan-400 duration-300">Home</a>
-            </li>
-            <li>
-              <a href="#about" class="nav-link hover:text-cyan-400 duration-300">About</a>
-            </li>
-            <li>
-              <a href="#skills" class="nav-link hover:text-cyan-400 duration-300">Skills</a>
-            </li>
-            <li>
-              <a href="#projects" class="nav-link hover:text-cyan-400 duration-300">Projects</a>
-            </li>
-            <li>
-              <a href="#certificates" class="nav-link hover:text-cyan-400 duration-300">Certificates</a>
-            </li>
-            <li>
-              <a href="#education" class="nav-link hover:text-cyan-400 duration-300">Education</a>
-            </li>
-            <li>
-              <a href="#contact" class="nav-link hover:text-cyan-400 duration-300">Contact</a>
-            </li>
+          <ul class="hidden lg:flex space-x-6 text-base xl:space-x-8 xl:text-lg">
+            <li><a href="#home" class="nav-link duration-300">Home</a></li>
+            <li><a href="#about" class="nav-link duration-300">About</a></li>
+            <li><a href="#education" class="nav-link duration-300">Education</a></li>
+            <li><a href="#skills" class="nav-link duration-300">Skills</a></li>
+            <li><a href="#projects" class="nav-link duration-300">Projects</a></li>
+            <li><a href="#certificates" class="nav-link duration-300">Certificates</a></li>
+            <li><a href="#contact" class="nav-link duration-300">Contact</a></li>
           </ul>
 
-          <!-- Mobile menu button -->
           <button
-            id="menuBtn"
-            aria-label="Toggle menu"
+            id="hamburger"
+            class="hamburger lg:hidden"
+            aria-label="Toggle navigation menu"
             aria-expanded="false"
-            class="md:hidden text-2xl w-10 h-10 flex items-center justify-center rounded-lg hover:bg-white/10 transition"
           >
-            <i class="fas fa-bars" id="menuIcon"></i>
+            <span></span>
+            <span></span>
+            <span></span>
           </button>
         </div>
       </div>
-
-      <!-- Mobile menu panel -->
-      <ul
-        id="mobileMenu"
-        class="md:hidden hidden flex-col gap-1 px-5 pb-6 pt-2 text-base bg-black/60 backdrop-blur-xl border-t border-gray-700"
-      >
-        <li><a href="#home" class="mobile-link">Home</a></li>
-        <li><a href="#about" class="mobile-link">About</a></li>
-        <li><a href="#skills" class="mobile-link">Skills</a></li>
-        <li><a href="#projects" class="mobile-link">Projects</a></li>
-        <li><a href="#certificates" class="mobile-link">Certificates</a></li>
-        <li><a href="#education" class="mobile-link">Education</a></li>
-        <li><a href="#contact" class="mobile-link">Contact</a></li>
-      </ul>
     </nav>
+
+    <!-- Mobile menu -->
+
+    <div id="mobileMenu" class="mobile-menu">
+      <a href="#home" class="mobile-link">Home</a>
+      <a href="#about" class="mobile-link">About</a>
+      <a href="#education" class="mobile-link">Education</a>
+      <a href="#skills" class="mobile-link">Skills</a>
+      <a href="#projects" class="mobile-link">Projects</a>
+      <a href="#certificates" class="mobile-link">Certificates</a>
+      <a href="#contact" class="mobile-link">Contact</a>
+    </div>
 
     <!-- Hero -->
 
-    <section id="home" class="min-h-screen flex items-center pt-24 sm:pt-20">
-      <div
-        class="max-w-7xl mx-auto px-5 sm:px-8 grid md:grid-cols-2 gap-10 sm:gap-14 md:gap-20 items-center"
-      >
-        <div class="reveal order-2 md:order-1 text-center md:text-left">
-        
+    <section id="home" class="min-h-screen flex items-center pt-20">
+      <div class="hero-grid max-w-7xl mx-auto px-6 md:px-8">
+        <div class="hero-copy">
+          <span class="eyebrow-tag">Available for opportunities</span>
 
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-semibold leading-tight">
-            SOUMAJIT
-            <span class="text-slate-900 block sm:inline"> CHAKRABORTY </span>
+          <h1 class="hero-name text-5xl md:text-6xl font-semibold mt-6">
+            SUBHAJIT
+            <span class="gradient-text"> CHAKRABORTY </span>
           </h1>
 
-          <p class="mt-6 sm:mt-8 text-gray-300 text-base sm:text-lg leading-7 sm:leading-8 max-w-xl mx-auto md:mx-0">
+          <p class="typewriter mt-5"><span id="typewriterText"></span><span class="cursor"></span></p>
+
+          <p class="mt-8 text-gray-300 text-lg leading-8 max-w-xl">
             Passionate Computer Science student with strong knowledge of HTML,
             CSS, JavaScript, React, Node.js, Express.js, MongoDB, SQL and
             Tailwind CSS. Interested in Full Stack Web Development, Problem
             Solving and Modern UI Design.
           </p>
 
-          <div class="mt-8 sm:mt-10 flex flex-wrap justify-center md:justify-start gap-4 sm:gap-6">
-            <a href="#" class="button w-full xs:w-auto text-center"> Download Resume </a>
-
-            <a href="#contact" class="button2 w-full xs:w-auto text-center"> Hire Me </a>
+          <div class="hero-buttons mt-10 flex flex-wrap gap-6">
+            <a href="#" class="button">Download Resume</a>
+            <a href="#contact" class="button2">Hire Me</a>
           </div>
 
-          <div class="mt-8 sm:mt-10 flex justify-center md:justify-start gap-6 text-2xl sm:text-3xl">
-            <i class="fab fa-github social"></i>
-            <i class="fab fa-linkedin social"></i>
-            <i class="fab fa-instagram social"></i>
-            <i class="fas fa-envelope social"></i>
+          <div class="hero-socials mt-10 flex gap-4">
+            <a href="#" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#contact" class="social-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
           </div>
         </div>
 
-        <div class="flex justify-center order-1 md:order-2 reveal">
-          <img src="dp.jpg" class="profile" alt="Soumajit Chakraborty" />
+        <div class="hero-image flex justify-center items-center">
+          <div class="profile-frame">
+            <img src="dp1.jpg" class="profile" alt="Portrait of Subhajit Chakraborty" />
+          </div>
         </div>
       </div>
     </section>
 
     <!-- About -->
 
-    <section id="about" class="py-16 sm:py-24">
-      <div class="max-w-7xl mx-auto px-5 sm:px-8 reveal">
-        <h2 class="heading">About Me</h2>
+    <section id="about" class="py-24">
+      <div class="max-w-7xl mx-auto px-6 md:px-8">
+        <div class="heading-wrap reveal">
+          <span class="section-eyebrow" style="justify-content:center;">Get to know me</span>
+          <h2 class="heading">About Me</h2>
+        </div>
 
-        <div class="glass p-6 sm:p-10 mt-10 sm:mt-12">
-          <p class="text-base sm:text-lg leading-7 sm:leading-9 text-gray-300">
+        <div class="glass p-8 md:p-10 mt-12 reveal">
+          <p class="text-lg leading-9 text-gray-300">
             I am a Computer Science graduate passionate about creating
             beautiful, responsive and user-friendly websites. I enjoy learning
             new technologies and solving real-world problems through coding. I
@@ -148,248 +143,244 @@
 
     <!-- Education -->
 
-    <section id="education" class="py-16 sm:py-24">
-      <div class="max-w-7xl mx-auto px-5 sm:px-8">
-        <h2 class="heading reveal">Education</h2>
+    <section id="education" class="py-24">
+      <div class="max-w-7xl mx-auto px-6 md:px-8">
+        <div class="heading-wrap reveal">
+          <span class="section-eyebrow" style="justify-content:center;">My academic path</span>
+          <h2 class="heading">Education</h2>
+        </div>
 
-        <div class="mt-10 sm:mt-12 space-y-6 sm:space-y-8">
-          <div class="glass p-6 sm:p-8 reveal timeline-item">
-            <h3 class="text-lg sm:text-2xl font-bold text-slate-100">
-              Bachelor of Technology in Computer Science & Engineering
-            </h3>
-            <p class="mt-3 text-gray-300 text-base sm:text-xl">
-              Bengal Institute Of Technology & Management
-            </p>
-            <p class="mt-2 text-cyan-400 font-bold">2022 - 2025</p>
-          </div>
+        <div class="glass edu-card p-8 mt-12 reveal">
+          <h3 class="text-2xl font-bold text-slate-100">
+            Bachelor of Technology in Computer Science & Engineering
+          </h3>
+          <p class="mt-3 text-gray-300 text-xl">
+            Bengal Institute Of Technology & Management
+          </p>
+          <span class="edu-period">2022 – 2025</span>
+        </div>
 
-          <div class="glass p-6 sm:p-8 reveal timeline-item">
-            <h3 class="text-lg sm:text-2xl font-bold text-slate-100">
-              Diploma In Mechanical Engineering
-            </h3>
-            <p class="mt-3 text-gray-300 text-base sm:text-xl">
-              Nalhati Government Polytechnic
-            </p>
-            <p class="mt-2 text-cyan-400 font-bold">2018 - 2021</p>
-          </div>
+        <div class="glass edu-card p-8 mt-8 reveal">
+          <h3 class="text-2xl font-bold text-slate-100">
+            Diploma In Mechanical Engineering
+          </h3>
+          <p class="mt-3 text-gray-300 text-xl">
+            Nalhati Government Polytechnic
+          </p>
+          <span class="edu-period">2018 – 2021</span>
+        </div>
 
-          <div class="glass p-6 sm:p-8 reveal timeline-item">
-            <h3 class="text-lg sm:text-2xl font-bold text-slate-100">
-              Secondary & Higher Secondary ( Science )
-            </h3>
-            <p class="mt-3 text-gray-300 text-base sm:text-xl">Sainthia High School</p>
-            <p class="mt-2 text-cyan-400 font-bold">2016 & 2018</p>
-          </div>
+        <div class="glass edu-card p-8 mt-8 reveal">
+          <h3 class="text-2xl font-bold text-slate-100">
+            Secondary & Higher Secondary ( Science )
+          </h3>
+          <p class="mt-3 text-gray-300 text-xl">Sainthia High School</p>
+          <span class="edu-period">2016 & 2018</span>
         </div>
       </div>
     </section>
 
     <!-- Skills -->
 
-    <section id="skills" class="py-16 sm:py-24">
-      <div class="max-w-7xl mx-auto px-5 sm:px-8">
-        <h2 class="heading reveal">Technical Skills</h2>
+    <section id="skills" class="py-24">
+      <div class="max-w-7xl mx-auto px-6 md:px-8">
+        <div class="heading-wrap reveal">
+          <span class="section-eyebrow" style="justify-content:center;">Tools I work with</span>
+          <h2 class="heading">Technical Skills</h2>
+        </div>
 
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 mt-10 sm:mt-16">
-          <div class="card reveal"><i class="fa-brands fa-html5"></i><span>HTML</span></div>
-          <div class="card reveal"><i class="fa-brands fa-css3-alt"></i><span>CSS</span></div>
-          <div class="card reveal"><i class="fa-brands fa-js"></i><span>JavaScript</span></div>
-          <div class="card reveal"><i class="fa-solid fa-wind"></i><span>Tailwind CSS</span></div>
-          <div class="card reveal"><i class="fa-brands fa-react"></i><span>React</span></div>
-          <div class="card reveal"><i class="fa-brands fa-node-js"></i><span>Node.js</span></div>
-          <div class="card reveal"><i class="fa-solid fa-server"></i><span>Express.js</span></div>
-          <div class="card reveal"><i class="fa-solid fa-database"></i><span>MongoDB</span></div>
-          <div class="card reveal"><i class="fa-solid fa-database"></i><span>SQL</span></div>
-          <div class="card reveal"><i class="fa-solid fa-microchip"></i><span>IoT</span></div>
-          <div class="card reveal"><i class="fa-brands fa-github"></i><span>GitHub</span></div>
-          <div class="card reveal"><i class="fa-solid fa-code"></i><span>C Programming</span></div>
+        <div class="reveal-stagger grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mt-16">
+          <div class="card"><i class="fab fa-html5"></i>HTML</div>
+          <div class="card"><i class="fab fa-css3-alt"></i>CSS</div>
+          <div class="card"><i class="fab fa-js"></i>JavaScript</div>
+          <div class="card"><i class="fas fa-wind"></i>Tailwind CSS</div>
+          <div class="card"><i class="fab fa-react"></i>React</div>
+          <div class="card"><i class="fab fa-node-js"></i>Node.js</div>
+          <div class="card"><i class="fas fa-server"></i>Express.js</div>
+          <div class="card"><i class="fas fa-leaf"></i>MongoDB</div>
+          <div class="card"><i class="fas fa-database"></i>SQL</div>
+          <div class="card"><i class="fas fa-microchip"></i>IoT</div>
+          <div class="card"><i class="fab fa-github"></i>GitHub</div>
+          <div class="card"><i class="fas fa-code"></i>C Programming</div>
         </div>
       </div>
     </section>
 
     <!-- Projects -->
 
-    <section id="projects" class="py-16 sm:py-24">
-      <div class="max-w-7xl mx-auto px-5 sm:px-8">
-        <h2 class="heading reveal">Projects</h2>
+    <section id="projects" class="py-24">
+      <div class="max-w-7xl mx-auto px-6 md:px-8">
+        <div class="heading-wrap reveal">
+          <span class="section-eyebrow" style="justify-content:center;">Things I've built</span>
+          <h2 class="heading">Projects</h2>
+        </div>
 
-        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 md:gap-10 mt-10 sm:mt-16">
-          <div class="project cursor-pointer reveal">
-            <div class="project-img-wrap">
-              <img src="ecom.png" alt="E-Commerce Website" />
-            </div>
-            <h3 class="font-semibold text-slate-100 text-lg sm:text-xl text-center mt-4">
+        <div class="reveal-stagger grid sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-10 mt-16">
+          <div class="project cursor-pointer">
+            <img src="ecom.png" alt="E-Commerce Website project screenshot" loading="lazy" />
+            <h3 class="font-semibold text-slate-100 text-xl text-center">
               E-Commerce Website
             </h3>
-            <p class="text-center tracking-wide text-sm sm:text-base text-gray-300 mt-1">
-              HTML, CSS, Bootstrap, Django, MySQL
-            </p>
+            <div class="tag-row">
+              <span class="tag">HTML</span><span class="tag">CSS</span>
+              <span class="tag">Bootstrap</span><span class="tag">Django</span>
+              <span class="tag">MySQL</span>
+            </div>
           </div>
 
-          <div class="project reveal">
-            <div class="project-img-wrap">
-              <img src="mytech.png" alt="My Tech Academy" />
-            </div>
-            <h3 class="font-semibold text-slate-100 text-lg sm:text-xl text-center mt-4">
+          <div class="project cursor-pointer">
+            <img src="mytech.png" alt="My Tech Academy project screenshot" loading="lazy" />
+            <h3 class="font-semibold text-slate-100 text-xl text-center">
               My Tech Academy
             </h3>
-            <p class="text-center tracking-wide text-sm sm:text-base text-gray-300 mt-1">
-              JavaScript, React, Tailwind CSS
-            </p>
+            <div class="tag-row">
+              <span class="tag">JavaScript</span><span class="tag">React</span>
+              <span class="tag">Tailwind CSS</span>
+            </div>
           </div>
 
-          <div class="project cursor-pointer reveal">
-            <div class="project-img-wrap">
-              <img src="yukti.png" alt="Yukti Tech Website" />
-            </div>
-            <h3 class="font-semibold text-slate-100 text-lg sm:text-xl text-center mt-4">
+          <div class="project cursor-pointer">
+            <img src="yukti.png" alt="Yukti Tech Website project screenshot" loading="lazy" />
+            <h3 class="font-semibold text-slate-100 text-xl text-center">
               Yukti Tech Website
             </h3>
-            <p class="text-center tracking-wide text-sm sm:text-base text-gray-300 mt-1">
-              Javascript, React, Tailwind CSS
-            </p>
+            <div class="tag-row">
+              <span class="tag">JavaScript</span><span class="tag">React</span>
+              <span class="tag">Tailwind CSS</span>
+            </div>
           </div>
 
-          <div class="project cursor-pointer reveal">
-            <div class="project-img-wrap">
-              <img src="lumina.png" alt="Online Shopping Website" />
-            </div>
-            <h3 class="font-semibold text-slate-100 text-lg sm:text-xl text-center mt-4">
+          <div class="project cursor-pointer">
+            <img src="lumina.png" alt="Online Shopping Website project screenshot" loading="lazy" />
+            <h3 class="font-semibold text-slate-100 text-xl text-center">
               Online Shopping Website
             </h3>
-            <p class="text-center tracking-wide text-sm sm:text-base text-gray-300 mt-1">
-              Javascript, React, Tailwind CSS
-            </p>
+            <div class="tag-row">
+              <span class="tag">JavaScript</span><span class="tag">React</span>
+              <span class="tag">Tailwind CSS</span>
+            </div>
           </div>
 
-          <div class="project cursor-pointer reveal">
-            <div class="project-img-wrap">
-              <img src="neo.png" alt="Neo Digital Bank" />
-            </div>
-            <h3 class="font-semibold text-slate-100 text-lg sm:text-xl text-center mt-4">
+          <div class="project cursor-pointer">
+            <img src="neo.png" alt="Neo Digital Bank project screenshot" loading="lazy" />
+            <h3 class="font-semibold text-slate-100 text-xl text-center">
               Neo Digital Bank
             </h3>
-            <p class="text-center tracking-wide text-sm sm:text-base text-gray-300 mt-1">
-              HTML, CSS, Javascript, React
-            </p>
+            <div class="tag-row">
+              <span class="tag">HTML</span><span class="tag">CSS</span>
+              <span class="tag">JavaScript</span><span class="tag">React</span>
+            </div>
           </div>
 
-          <div class="project reveal">
-            <div class="project-img-wrap">
-              <img src="myfood.png" alt="Online Food Website" />
-            </div>
-            <h3 class="font-semibold text-slate-100 text-lg sm:text-xl text-center mt-4">
+          <div class="project cursor-pointer">
+            <img src="myfood.png" alt="Online Food Website project screenshot" loading="lazy" />
+            <h3 class="font-semibold text-slate-100 text-xl text-center">
               Online Food Website
             </h3>
-            <p class="text-center tracking-wide text-sm sm:text-base text-gray-300 mt-1">
-              HTML, CSS, Javascript, React
-            </p>
+            <div class="tag-row">
+              <span class="tag">HTML</span><span class="tag">CSS</span>
+              <span class="tag">JavaScript</span><span class="tag">React</span>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Certificates -->
+    <!-- certificate -->
 
-    <section id="certificates" class="py-16 sm:py-24">
-      <div class="max-w-7xl mx-auto px-5 sm:px-8">
-        <h2 class="heading reveal">Certificates</h2>
+    <section id="certificates" class="py-24">
+      <div class="max-w-7xl mx-auto px-6 md:px-8">
+        <div class="heading-wrap reveal">
+          <span class="section-eyebrow" style="justify-content:center;">Proof of learning</span>
+          <h2 class="heading">Certificates</h2>
+        </div>
 
-        <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 md:gap-10 mt-10 sm:mt-16">
-          <div class="project cursor-pointer reveal">
-            <div class="project-img-wrap">
-              <img src="soumajit_webdev.png" alt="Web Development Using Python With Django" />
-            </div>
-            <h3 class="font-semibold text-slate-100 text-base sm:text-xl text-center mt-4">
+        <div class="reveal-stagger grid sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-10 mt-16">
+          <div class="project cursor-pointer">
+            <img src="subhajit_django.png" alt="Web Development Using Python With Django certificate" loading="lazy" />
+            <h3 class="font-semibold text-slate-100 text-xl text-center">
               Web Development Using Python With Django
             </h3>
-            <p class="text-center tracking-wide text-sm sm:text-base text-gray-300 mt-1">
-              HTML, CSS, Bootstrap, Django, MySQL, Python
-            </p>
+            <div class="tag-row">
+              <span class="tag">HTML</span><span class="tag">CSS</span>
+              <span class="tag">Bootstrap</span><span class="tag">Django</span>
+              <span class="tag">MySQL</span><span class="tag">Python</span>
+            </div>
           </div>
 
-          <div class="project reveal">
-            <div class="project-img-wrap">
-              <img src="soumajit_cyber.png" alt="Bootcamp on Cyber Security & Ethical Hacking" />
-            </div>
-            <h3 class="font-semibold text-slate-100 text-base sm:text-xl text-center mt-4">
+          <div class="project cursor-pointer">
+            <img src="subhajit_cyber.png" alt="Bootcamp on Cyber Security and Ethical Hacking certificate" loading="lazy" />
+            <h3 class="font-semibold text-slate-100 text-xl text-center">
               Bootcamp on Cyber Security & Ethical Hacking
             </h3>
-            <p class="text-center tracking-wide text-sm sm:text-base text-gray-300 mt-1">
-              Linux and Accessories
-            </p>
+            <div class="tag-row">
+              <span class="tag">Linux</span><span class="tag">Security</span>
+            </div>
           </div>
 
-          <div class="project cursor-pointer reveal">
-            <div class="project-img-wrap">
-              <img src="soumajit_robo.png" alt="Online Bootcamp on Robotics & Drones" />
-            </div>
-            <h3 class="font-semibold text-slate-100 text-base sm:text-xl text-center mt-4">
+          <div class="project cursor-pointer">
+            <img src="subhajit_drone.png" alt="Online Bootcamp on Robotics and Drones certificate" loading="lazy" />
+            <h3 class="font-semibold text-slate-100 text-xl text-center">
               Online Bootcamp on Robotics & Drones
             </h3>
-            <p class="text-center tracking-wide text-sm sm:text-base text-gray-300 mt-1">
-              IoT, Tinkercad, Arduino IDE
-            </p>
+            <div class="tag-row">
+              <span class="tag">IoT</span><span class="tag">Tinkercad</span>
+              <span class="tag">Arduino IDE</span>
+            </div>
           </div>
 
-          <div class="project cursor-pointer reveal">
-            <div class="project-img-wrap">
-              <img src="soumajit_iot1.png" alt="Internship Certificate On Internet Of Things" />
-            </div>
-            <h3 class="font-semibold text-slate-100 text-base sm:text-xl text-center mt-4">
+          <div class="project cursor-pointer">
+            <img src="subhajit_iot.png" alt="Internship Certificate On Internet Of Things" loading="lazy" />
+            <h3 class="font-semibold text-slate-100 text-xl text-center">
               Internship Certificate On Internet Of Things
             </h3>
-            <p class="text-center tracking-wide text-sm sm:text-base text-gray-300 mt-1">
-              IoT, NodeMCU, Arduino IDE, Tinkercad
-            </p>
+            <div class="tag-row">
+              <span class="tag">IoT</span><span class="tag">NodeMCU</span>
+              <span class="tag">Arduino IDE</span><span class="tag">Tinkercad</span>
+            </div>
           </div>
 
-          <div class="project cursor-pointer reveal">
-            <div class="project-img-wrap">
-              <img src="soumajit_mern.png" alt="Webinar On MERN Stack" />
-            </div>
-            <h3 class="font-semibold text-slate-100 text-base sm:text-xl text-center mt-4">
+          <div class="project cursor-pointer">
+            <img src="subhajit_mern.png" alt="Webinar On MERN Stack certificate" loading="lazy" />
+            <h3 class="font-semibold text-slate-100 text-xl text-center">
               Webinar On MERN Stack
             </h3>
-            <p class="text-center tracking-wide text-sm sm:text-base text-gray-300 mt-1">
-              HTML, CSS, Javascript, React, NodeJS
-            </p>
+            <div class="tag-row">
+              <span class="tag">HTML</span><span class="tag">CSS</span>
+              <span class="tag">JavaScript</span><span class="tag">React</span>
+              <span class="tag">Node.js</span>
+            </div>
           </div>
 
-          <div class="project reveal">
-            <div class="project-img-wrap">
-              <img src="soumajit_python2.png" alt="Industrial Training Certificate On Python Programming Language" />
-            </div>
-            <h3 class="font-semibold text-slate-100 text-base sm:text-xl text-center mt-4">
+          <div class="project cursor-pointer">
+            <img src="subhajit_python.png" alt="Industrial Training Certificate On Python Programming Language" loading="lazy" />
+            <h3 class="font-semibold text-slate-100 text-xl text-center">
               Industrial Training Certificate On Python Programming Language
             </h3>
-            <p class="text-center tracking-wide text-sm sm:text-base text-gray-300 mt-1">
-              Python, Django
-            </p>
+            <div class="tag-row">
+              <span class="tag">Python</span><span class="tag">Django</span>
+            </div>
           </div>
 
-          <div class="project reveal">
-            <div class="project-img-wrap">
-              <img src="soumajit_iot2.png" alt="Industrial Training Certificate On Internet Of Things" />
-            </div>
-            <h3 class="font-semibold text-slate-100 text-base sm:text-xl text-center mt-4">
+          <div class="project cursor-pointer">
+            <img src="subhajit_iot1.png" alt="Industrial Training Certificate On Internet Of Things" loading="lazy" />
+            <h3 class="font-semibold text-slate-100 text-xl text-center">
               Industrial Training Certificate On Internet Of Things
             </h3>
-            <p class="text-center tracking-wide text-sm sm:text-base text-gray-300 mt-1">
-              IoT, NodeMCU, Arduino IDE, Tinkercad
-            </p>
+            <div class="tag-row">
+              <span class="tag">IoT</span><span class="tag">NodeMCU</span>
+              <span class="tag">Arduino IDE</span><span class="tag">Tinkercad</span>
+            </div>
           </div>
 
-          <div class="project reveal">
-            <div class="project-img-wrap">
-              <img src="soumajit_python.png" alt="Industrial Internship Certificate On Python Programming Language" />
-            </div>
-            <h3 class="font-semibold text-slate-100 text-base sm:text-xl text-center mt-4">
+          <div class="project cursor-pointer">
+            <img src="subhajit_python1.png" alt="Industrial Internship Certificate On Python Programming Language" loading="lazy" />
+            <h3 class="font-semibold text-slate-100 text-xl text-center">
               Industrial Internship Certificate On Python Programming Language
             </h3>
-            <p class="text-center tracking-wide text-sm sm:text-base text-gray-300 mt-1">
-              Python, Django
-            </p>
+            <div class="tag-row">
+              <span class="tag">Python</span><span class="tag">Django</span>
+            </div>
           </div>
         </div>
       </div>
@@ -397,11 +388,14 @@
 
     <!-- Contact -->
 
-    <section id="contact" class="py-16 sm:py-24">
-      <div class="max-w-4xl mx-auto px-5 sm:px-8 reveal">
-        <h2 class="heading">Contact Me</h2>
+    <section id="contact" class="py-24">
+      <div class="max-w-4xl mx-auto px-6 md:px-8">
+        <div class="heading-wrap reveal">
+          <span class="section-eyebrow" style="justify-content:center;">Let's talk</span>
+          <h2 class="heading">Contact Me</h2>
+        </div>
 
-        <form class="glass mt-10 sm:mt-12 p-6 sm:p-10">
+        <form class="glass mt-12 p-8 md:p-10 reveal">
           <input
             type="text"
             placeholder="Your Name"
@@ -412,109 +406,36 @@
           <input
             type="email"
             placeholder="Your Email"
-            class="input font-semibold text-white mt-6"
+            class="input font-semibold text-white"
             required
           />
 
           <textarea
             rows="6"
             placeholder="Message"
-            class="input font-semibold text-white mt-6"
+            class="input font-semibold text-white"
             required
           ></textarea>
 
-          <button type="submit" class="button mt-8 w-full sm:w-auto">Send Message</button>
+          <button type="submit" class="button button-full mt-8">Send Message</button>
         </form>
       </div>
     </section>
 
-    <footer class="py-8 px-5 text-center border-t border-white/10">
-      <div class="flex justify-center gap-6 text-xl mb-4">
-        <i class="fab fa-github social"></i>
-        <i class="fab fa-linkedin social"></i>
-        <i class="fab fa-instagram social"></i>
-        <i class="fas fa-envelope social"></i>
+    <footer class="site-footer py-10 text-center text-white">
+      <div class="flex justify-center gap-4 mb-5">
+        <a href="#" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#contact" class="social-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
       </div>
-      <p class="text-white/70 font-semibold text-sm sm:text-base">
-        © 2026 Soumajit Chakraborty. All Rights Reserved.
-      </p>
+      <p class="font-semibold text-gray-300">© 2026 Subhajit Chakraborty. All Rights Reserved.</p>
     </footer>
 
-    <!-- Back to top -->
-    <button id="toTop" aria-label="Back to top" class="to-top">
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
       <i class="fas fa-arrow-up"></i>
     </button>
 
-    <script>
-      // Mobile menu toggle
-      const menuBtn = document.getElementById("menuBtn");
-      const mobileMenu = document.getElementById("mobileMenu");
-      const menuIcon = document.getElementById("menuIcon");
-
-      menuBtn.addEventListener("click", () => {
-        const isOpen = mobileMenu.classList.toggle("flex");
-        mobileMenu.classList.toggle("hidden");
-        menuBtn.setAttribute("aria-expanded", isOpen ? "true" : "false");
-        menuIcon.classList.toggle("fa-bars");
-        menuIcon.classList.toggle("fa-xmark");
-      });
-
-      document.querySelectorAll(".mobile-link").forEach((link) => {
-        link.addEventListener("click", () => {
-          mobileMenu.classList.add("hidden");
-          mobileMenu.classList.remove("flex");
-          menuIcon.classList.add("fa-bars");
-          menuIcon.classList.remove("fa-xmark");
-          menuBtn.setAttribute("aria-expanded", "false");
-        });
-      });
-
-      // Scroll reveal
-      const revealEls = document.querySelectorAll(".reveal");
-      const io = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("in-view");
-              io.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.15 }
-      );
-      revealEls.forEach((el) => io.observe(el));
-
-      // Back to top visibility
-      const toTop = document.getElementById("toTop");
-      window.addEventListener("scroll", () => {
-        if (window.scrollY > 500) {
-          toTop.classList.add("show");
-        } else {
-          toTop.classList.remove("show");
-        }
-      });
-      toTop.addEventListener("click", () => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      });
-
-      // Active nav link highlight on scroll
-      const sections = document.querySelectorAll("section[id]");
-      const navLinks = document.querySelectorAll(".nav-link");
-      window.addEventListener("scroll", () => {
-        let current = "";
-        sections.forEach((section) => {
-          const sectionTop = section.offsetTop - 120;
-          if (window.scrollY >= sectionTop) {
-            current = section.getAttribute("id");
-          }
-        });
-        navLinks.forEach((link) => {
-          link.classList.remove("active-link");
-          if (link.getAttribute("href") === "#" + current) {
-            link.classList.add("active-link");
-          }
-        });
-      });
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
